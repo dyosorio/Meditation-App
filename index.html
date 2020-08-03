@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Meditation App</title>
 </head>
 <body>
-    
+
+    <div class="app">
+
+
+        <div class="vid-container">
+            <video loop type=video/mp4>
+                <source src="./video/stream.mp4">
+            </video>
+        </div>
+
+
+        <div class="time-select">
+            <button data-time="600">10 minutes</button>
+            <button data-time="1200">20 minutes</button>
+            <button data-time="1800">30 minutes</button>
+
+        </div>
+
+        <div class="player-container">
+
+            <div class="app-title">
+                <h1>Sounds of Nicaragua</h1>
+            </div>
+
+            <audio class="song">
+                <source src="./checho-sounds/stream.wav">    
+            </audio>
+            <img src="./svg/play.svg" alt="play" class="play">
+            <svg
+            class="track-outline" 
+            width="453" 
+            height="453" 
+            viewBox="0 0 453 453" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <circle 
+                cx="226.5" 
+                cy="226.5" 
+                r="216.5" 
+                stroke="white" 
+                stroke-width="20"/>
+                </svg>
+            <svg
+            class="moving-outline" 
+            width="453" 
+            height="453" 
+            viewBox="0 0 453 453" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <circle 
+                cx="226.5" 
+                cy="226.5" 
+                r="216.5" 
+                stroke="#018EBA" 
+                stroke-width="20"/>
+                </svg>
+            <h3 class="time-display">0:00</h3>
+        </div>
+
+        <div class="sound-picker"> 
+
+            <button data-sound="./checho-sounds/stream.wav" data-video="./video/stream.mp4">
+                <img src="./svg/stream.svg" alt="stream">
+            </button>
+            <button data-sound="./checho-sounds/beach.wav" data-video="./video/beach.mp4">
+                <img src="./svg/beach.svg" alt="beach">
+            </button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
